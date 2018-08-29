@@ -1,0 +1,5 @@
+1. download jdk 10 her måske? http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html
+2. Tilføj ny variable: "JAVA_HOME" peger på roden af java ex. "D:\Program Files\Java\jdk-10.0.2"
+3. Tilføj til PATH variablen: ;%JAVA_HOME%\bin
+
+done
