@@ -14,8 +14,7 @@ class Program{
             }
             else if(snake1.positionX == rabbit1.positionX && snake1.positionY == rabbit1.positionY) {
             rabbit1.talkDead();
-            }
-            
+            } 
       }while (snake1.positionX != rabbit1.positionX && snake1.positionY != rabbit1.positionY);          
    }
 }
