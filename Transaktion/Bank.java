@@ -10,9 +10,9 @@ class Bank {
        
        account2.accountFullName = "person2";
        account2.accountID = 2;
-       account2.bankroll = 100;
+       account2.bankroll = 0;
     
-       
+       account1.transaction(1, 2, 100)
       
    /*
    double fromAccountID;
