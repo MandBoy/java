@@ -8,8 +8,8 @@ class Program{
             rabbit1.move(1, 1);
             rabbit1.talkPosition();
             snake1.talkPosition();
-         //System.out.println(snake1.positionX - rabbit1.positionX);
-            if (snake1.positionX - rabbit1.positionX == 2){
+         System.out.println(snake1.positionX - rabbit1.positionX + " - " + snake1.positionY - rabbit1.positionY);
+            if (snake1.positionX - rabbit1.positionX == -1 && snake1.positionY - rabbit1.positionY == -1){
                rabbit1.talkAlmostDead();
             }
             else if(snake1.positionX == rabbit1.positionX && snake1.positionY == rabbit1.positionY) {
@@ -21,8 +21,8 @@ class Program{
 
 
 class Rabbit {
-   int positionX = 0;
-   int positionY = 0;
+   int positionX = 1;
+   int positionY = 1;
    void talkPosition() {
       System.out.println("I am the Rabbit my position is; " + positionX + ", " + positionY);
    }
