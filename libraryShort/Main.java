@@ -29,6 +29,6 @@ class Main {
    //ISBN2.printBookCount();
    ISBN1.loanBook(customer1.customerID);
    ISBN2.loanBook(customer1.customerID);
-   WriteFile data = new WriteFile("D:/Temp\test.txt", true);
+   WriteFile data = new WriteFile("C:\temp", false);
    }
 }
