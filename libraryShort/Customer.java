@@ -4,5 +4,4 @@ class Customer {
    String customerAddress;
    int customerPhone;
    String customerMailAddr;
-   
 }
