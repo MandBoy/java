@@ -5,7 +5,6 @@ public class Book {
    int bookCount;
    String bookGenre;
    
-  
    
    public int getBookCount() {
       return bookCount;
@@ -16,9 +15,10 @@ public class Book {
       }
       else {
          System.out.println("Bookcount is: " + bookCount);
-         System.out.println("Book can be loaned by Customer: " + customerID);
+         System.out.println("Book are now loaned by CustomerID: " + customerID);
          bookCount--;
          System.out.println("Bookcount is now: " + bookCount);
+         System.out.println("store in database");
          
       }
    }   

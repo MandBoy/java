@@ -15,20 +15,10 @@ class Main {
    Customer customer1 = new Customer();
    customer1.customerID = 10;
    
-   
-   /*
-    int customerID;
-   String customerName;
-   String customerAddress;
-   int customerPhone;
-   String customerMailAddr;
-   */
-   
-   
+
    //ISBN1.printBookCount();   
    //ISBN2.printBookCount();
    ISBN1.loanBook(customer1.customerID);
    ISBN2.loanBook(customer1.customerID);
-   WriteFile data = new WriteFile("C:\temp", false);
    }
 }
