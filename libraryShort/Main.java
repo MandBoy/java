@@ -20,7 +20,7 @@ class Main {
    //Create 5 customer objects.
    Customer[] customer = new Customer[10];
    for (int i=0; i < 5; i++){
-      customer[i] = new Customer("Customer name1", "customerAdress 11", 22442244, "at@gmail.com");
+      customer[i] = new Customer("Customer name" + i, "customerAdress 11", 22442244, "at@gmail.com");
       customer[i].printCustomer();
       System.out.println("customer" + i + " oprettet");
    }
