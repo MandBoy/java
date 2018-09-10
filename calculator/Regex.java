@@ -3,8 +3,11 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 class Regex 
-{
+{  
+   //Only Numers 0-9
    private final String regexOnlyNumbers = "^[0-9]*$";
+   //Only Letters a-zA-Z
+   private final String regexOnlyLetters = "^[a-zA-Z]*$";
  
    public boolean onlyNumbers(String checkString) 
    {  
@@ -16,5 +19,18 @@ class Regex
       }
       //no match
       return false;        
-   }  
+   }
+   
+   public boolean onlyLetters(String checkString) 
+   {  
+      Pattern pattern = Pattern.compile(regexOnlyLetters);
+      Matcher matcher = pattern.matcher(checkString); 
+      //match   
+      if(matcher.find()) {
+         return true;
+      }
+      //no match
+      return false;        
+   }
+   
 }

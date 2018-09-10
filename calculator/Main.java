@@ -2,14 +2,22 @@ public class Main
 {
    public static void main(String[] args) 
    {
-      Regex regex = new Regex();
+      //Regex regex = new Regex();
       /*
-      boolean x = regex.onlyNumbers("1");
+      boolean x = regex.onlyLetters("1AA");
       System.out.println(x);
-      boolean y = regex.onlyNumbers("1f");
-      System.out.println(y);
-      */
+      boolean y = regex.onlyLetters("fFasdasdasdASDASD");
+      System.out.println(y); */
+      
+      String[] inputs;
       GetInput getInput = new GetInput();
-      getInput.getInput();
+      inputs = getInput.getInput();
+      
+      Calculator calculate = new Calculator();
+      calculate.calculate(inputs);
+      
+      
+      
+
    }
 }
