@@ -4,6 +4,6 @@ public class Main
    {
       Regex regex = new Regex();
       
-      regex.regexOnlyNumbers("1f");
+      boolean x = regex.regexOnlyNumbers("1f");
    }
 }

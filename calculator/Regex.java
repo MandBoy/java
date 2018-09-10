@@ -5,37 +5,22 @@ import java.util.regex.Matcher;
 class Regex 
 {
    private final String regexOnlyNumbers = "^[0-9]*$";
-   private boolean patternFound = false;
-   
-   public void regexOnlyNumbers(String checkString) 
-   {
-      Pattern pattern = Pattern.compile(regexOnlyNumbers);
-      Matcher matcher = pattern.matcher(checkString);    
-      if(matcher.find()) {
-         System.out.println("Match!");
-      }
-      else{
-         System.out.println("No Match!");
-      }
-         
-      /*        Pattern pattern = 
-            Pattern.compile(console.readLine("%nEnter your regex: "));
+   boolean patternFound = false;
 
-            Matcher matcher = 
-            pattern.matcher(console.readLine("Enter input string to search: "));
-            
-               boolean found = false;
-            while (matcher.find()) {
-                console.format("I found the text" +
-                    " \"%s\" starting at " +
-                    "index %d and ending at index %d.%n",
-                    matcher.group(),
-                    matcher.start(),
-                    matcher.end());
-                found = true;
-            }
-            if(!found){
-                console.format("No match found.%n");
-            }*/
+   
+   public boolean regexOnlyNumbers(String checkString) 
+   {  
+      Pattern pattern = Pattern.compile(regexOnlyNumbers);
+      Matcher matcher = pattern.matcher(checkString); 
+      //match   
+      if(matcher.find()) {
+         patternFound = true;
+         return patternFound;
+      }
+      //no match
+      return patternFound;
+         
    }
+   
+   //check om hvis der kører flere om patternfound bliver ved med at være true?
 }
