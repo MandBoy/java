@@ -35,15 +35,25 @@ class ForLoop {
          //Exercise 3
          //Use for loop to print odd numbers
          //Code:
-         
+       /*
          for (int i = 0; i < 50; i++){
             if(i%2 != 0){
                System.out.println(i);
             }
          }
+       */  
          
+       
+         greet(5);
          
        }
+      public static void greet(int j) 
+         {
+            for(int i = 0; i <= j; i++)
+            {
+               System.out.println("Hello " + i);
+            }
+         }
          
     
 }

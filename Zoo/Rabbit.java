@@ -24,3 +24,4 @@ class Rabbit {
       talk("currentPos");
    }
 }
+   

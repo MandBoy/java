@@ -1,0 +1,55 @@
+Regex Noter:
+
+Metacharacters;
+<([{\^-=$!|]})?*+.>
+
+2 måder at behandle et metacharacter som et alm. character.
+
+    precede the metacharacter with a backslash, or
+    enclose it within \Q (which starts the quote) and \E (which ends it).
+
+When using this technique, the \Q and \E can be placed at any location within the expression, provided that the \Q comes first.
+
+
+. betyder "any character".
+
+
+Construct 	      Description
+[abc] 	         a, b, or c (simple class)
+[^abc] 	         Any character except a, b, or c (negation)
+[a-zA-Z] 	      a through z, or A through Z, inclusive (range) //leder efter alle bogstaver Store/små
+[a-d[m-p]]     	a through d, or m through p: [a-dm-p] (union) //leder efter små bogstaver fra a-d og fra m-p
+[a-z&&[def]]    	d, e, or f (intersection)  //leder efter små bogstaver D, E eller F.
+[a-z&&[^bc]]   	a through z, except for b and c: [ad-z] (subtraction) //leder efter alle bogstaver undtagen b og c. kunne også skrives som[ad-z]
+[a-z&&[^m-p]]   	a through z, and not m through p: [a-lq-z] (subtraction) //små bogstaver undtagen m gennem p.
+
+
+//Negation
+Regex: [bcr]at 
+Kan også bruges.
+Dette vil matche: bat, cat og rat. 
+Kan vendes om med: 
+[^bcr]at
+Nu vil eksempelvis "hat" findes.
+
+//Ranges
+Regex: foo[1-5]
+Vil finde foo1, foo2, foo3, foo4, foo5 - men ikke foo6 osv.....
+ligesom den kan vendes om med foo[^1-5]
+
+//Unions
+Regex: [0-4[6-8]]
+Kigger efter alle tal undtagen 5, 6 og 9
+
+//Intersections
+Regex: [0-9&&[345]]
+Kigger efter 3, 4, og 5.
+Andre findes ikke.
+
+Regex: [2-8&&[4-6]]
+Kigg efter 4,5 og 6
+
+//Subtraction
+
+Regex: [0-9&&[^345]] 
+Kigger efter alle tal undtagen 3,4 og 5
