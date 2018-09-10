@@ -5,6 +5,14 @@ public class Book {
    private int bookCount;
    private String bookGenre;
    
+   public Book()
+   {
+      this.bookISBN = 0;
+      this.bookAuthor = "AuthorNotSet";
+      this.bookCount = 0;
+      this.bookGenre = "GenreNotSet";
+   }
+   
    public Book(int bookISBN, String bookAuthor, int bookCount, String bookGenre)
    {
       this.bookISBN = bookISBN;

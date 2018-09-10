@@ -25,6 +25,9 @@ class Main {
       System.out.println("customer" + i + " oprettet");
    }
    
+   Book book5 = new Book();
+   book5.printBook();
+   
    //public void createCustomer(String customerName, String customerAddress, int customerPhone, String customerMailAddr
 
    //ISBN1.printBookCount();   

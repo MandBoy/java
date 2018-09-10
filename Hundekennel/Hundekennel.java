@@ -14,8 +14,15 @@ public class Hundekennel
       
       hund1.hundeInfo();
       
-      hund2.setHund("Fiddo", "Grøn", 20, 40);
-      hund2.hundeInfo();
+      //hund2.setHund("Fiddo", "Grøn", 20, 40);
+      //hund2.hundeInfo();
+      
+      
+      Hund hund3 = new Hund();
+      hund3.hundeInfo();
+      
+      Hund hund4 = new Hund("Bente", "Sort", 50, 70);
+      hund4.hundeInfo();
       
 
    }
