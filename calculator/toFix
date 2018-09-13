@@ -1,4 +1,3 @@
 Fixes
 
 1. Fix regex så der kan tastes komma tal altså .
-2. 2 do while loops bør laves til en forløkke i getInput klassen

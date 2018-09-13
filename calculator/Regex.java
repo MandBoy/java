@@ -4,10 +4,11 @@ import java.util.regex.Matcher;
 
 class Regex 
 {  
-   //Only Numers 0-9
+   //Only Numbers 0-9 - kun heltal :(  
    private final String regexOnlyNumbers = "^[0-9]*$";
    //Only Letters a-zA-Z
    private final String regexOnlyLetters = "^[a-zA-Z]*$";
+   
  
    public boolean onlyNumbers(String checkString) 
    {  
