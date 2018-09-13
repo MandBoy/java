@@ -8,14 +8,10 @@ class Regex
    private final String regexOnlyNumbers = "^[0-9]*$";
    //Only Letters a-zA-Z
    private final String regexOnlyLetters = "^[a-zA-Z]*$";
-<<<<<<< HEAD
-   
- 
-=======
+
    //Only + - / *
    private final String regexOnlyMathSigns = "^[+-/]"; //mangler *
    
->>>>>>> 3875609bab73cd1e4c7709a8c9d1fdfd3f49dd24
    public boolean onlyNumbers(String checkString) 
    {  
       Pattern pattern = Pattern.compile(regexOnlyNumbers);
