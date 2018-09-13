@@ -8,7 +8,9 @@ class Regex
    private final String regexOnlyNumbers = "^[0-9]*$";
    //Only Letters a-zA-Z
    private final String regexOnlyLetters = "^[a-zA-Z]*$";
- 
+   //Only + - / *
+   private final String regexOnlyMathSigns = "^[+-/]"; //mangler *
+   
    public boolean onlyNumbers(String checkString) 
    {  
       Pattern pattern = Pattern.compile(regexOnlyNumbers);
@@ -33,4 +35,15 @@ class Regex
       return false;        
    }
    
+   public boolean onlyMathSigns(String checkString) 
+   {  
+      Pattern pattern = Pattern.compile(regexOnlyMathSigns);
+      Matcher matcher = pattern.matcher(checkString); 
+      //match   
+      if(matcher.find()) {
+         return true;
+      }
+      //no match
+      return false;        
+   }
 }
