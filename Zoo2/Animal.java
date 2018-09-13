@@ -6,6 +6,7 @@ class Animal {
 
    private int posX;
    private int posY;
+
    
    public Animal(int posX, int posY)
    {
@@ -15,7 +16,7 @@ class Animal {
 
    public void speakPosition()
    {
-      System.out.println("My position is: " + this.getPosX() + ", " + this.getPosY());
+      System.out.println(": My position is: " + this.getPosX() + ", " + this.getPosY());
    }
    public void move(String direction)
    {

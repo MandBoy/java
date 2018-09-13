@@ -4,24 +4,25 @@ class Game {
    public static Console console = System.console();
 
    public static void main(String[] args) {
-  
    
-   showMainMenu();
    
+      showMainMenu();
    }
    public static void showMainMenu() {
-	System.out.println("1. New Match");
-	System.out.println("2. Exit");
-
-	switch(readInt()) {
-		case 1:
-         break;
-		case 2:
-			break;
-		default:
-			showMainMenu();
-			break;
-	   }
+      System.out.println("1. New Match");
+      System.out.println("2. Exit");
+   
+      switch(readInt()) {
+         case 1:
+         Match match = new Match();
+         match.startMatch();
+            break;
+         case 2:
+            break;
+         default:
+            showMainMenu();
+            break;
+      }
    }
    public static int readInt() {
       try {
@@ -29,5 +30,6 @@ class Game {
       } catch(Exception e) {
          return readInt();
       }
-   }
+   }  
+ 
 }

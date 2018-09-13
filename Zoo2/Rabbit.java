@@ -2,7 +2,7 @@
 {
 //dette er vores metode
    public void beg() {
-      System.out.println("Please dont eat me");
+      System.out.println("Rabbit: Please dont eat me");
    }
 //dette er vores constructor
    public Rabbit (int posX, int posY)

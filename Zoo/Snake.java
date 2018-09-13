@@ -1,8 +1,8 @@
 class Snake {
    int positionX = 10;
    int positionY = 10;
-   void talk()  {
-      System.out.println("Snake :\t Muhahaha");
+   void eat()  {
+      System.out.println("Snake :\t Now i will eat you, Muhahaha");
    }
    void move(int newPosX, int newPosY) {
       positionX = positionX + newPosX;
