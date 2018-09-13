@@ -9,27 +9,25 @@ class Game {
    showMainMenu();
    
    }
-   
-   public static int readInt() {
-      try {
-         return Integer.parseInt(console.readLine());
-      } catch(Exception e) {
-         return readInt();
-      }
-   }
-   
-   public void showMainMenu() {
+   public static void showMainMenu() {
 	System.out.println("1. New Match");
 	System.out.println("2. Exit");
 
 	switch(readInt()) {
 		case 1:
-			break;
+         break;
 		case 2:
 			break;
 		default:
 			showMainMenu();
 			break;
 	   }
+   }
+   public static int readInt() {
+      try {
+         return Integer.parseInt(console.readLine());
+      } catch(Exception e) {
+         return readInt();
+      }
    }
 }
