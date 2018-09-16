@@ -14,21 +14,36 @@ public class Calculate
       this.var1 = var1;
       this.var2 = var2;
       this.operator = operator;
+      switch (operator){
+         case "+":
+         add();
+         break;
+         case "-":
+         subtract();
+         break;
+         case "*":
+         multiply();
+         break;
+         case "/":
+         divide();
+         break;
+      }
+      
     }
     
-    public double add(double var1, double var2){
+    private double add(){
       this.total = var1 + var2;
       return this.total;
     }
-    public double subtract(double var1, double var2){
+    private double subtract(){
       this.total = var1 - var2;
       return this.total;
     }
-    public double multiply(double var1, double var2){
+    private double multiply(){
       this.total = var1 * var2;
       return this.total;
     }
-    public double divide(double var1, double var2){
+    private double divide(){
       this.total = var1 / var2;
       return this.total;
     }

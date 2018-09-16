@@ -2,10 +2,8 @@ public class Calculator
 {
    public static void main(String[] args) 
    {
-      Calculate calculate = new Calculate(125, 50, ".");
+      Calculate calculate = new Calculate(50, 50, "*");
       
-      
-      
-      System.out.println(calculate.add(5,5));
+      System.out.println(calculate.getTotal());
    }
 }
