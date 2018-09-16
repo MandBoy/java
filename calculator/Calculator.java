@@ -1,3 +1,14 @@
+public class Calculator
+{
+   public static void main(String[] args) 
+   {
+          
+     
+      
+   }
+}
+
+/*
 class Calculator {
       double var1;
       double var2;
@@ -14,3 +25,5 @@ class Calculator {
       
 
 }
+
+*/
