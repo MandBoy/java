@@ -10,20 +10,17 @@ class Match {
       
       public void startMatch() 
       {
-         do {
+         while (snake.getPosX() != rabbit.getPosX() && snake.getPosY() != rabbit.getPosY()) {
             rabbit.move("up");
             rabbit.move("right");
-            snake.move("down");
-            snake.move("left");
-            snake.speakPosition();
             rabbit.speakPosition();
-            if (snake.getPosX() - rabbit.getPosX() == 2 && snake.getPosY() - rabbit.getPosY() == 2){
+            if (snake.getPosX() - rabbit.getPosX() == 1 && snake.getPosY() - rabbit.getPosY() == 1){
                rabbit.beg();            
             }
-            
-         
-         }while (snake.getPosX() != rabbit.getPosX() && snake.getPosY() != rabbit.getPosY());
+            snake.move("down");
+            snake.move("left");
+            snake.speakPosition();      
+         }
          snake.eat();
       }
-   
 }
