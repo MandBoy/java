@@ -17,9 +17,5 @@ class DatoTid {
       LocalDate firstBirthday = dateOfBirth.plusYears(1);
       System.out.println(firstBirthday);
       // 2013-05-14
-      
-      
-      
-   
    }
 }

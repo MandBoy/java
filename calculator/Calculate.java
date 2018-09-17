@@ -3,8 +3,8 @@ public class Calculate
     private double var1;
     private double var2;
     private double total;
-    private String operator;
-    
+
+    //get set
     public double getTotal(){
       return this.total;
     }
@@ -13,7 +13,6 @@ public class Calculate
     {
       this.var1 = var1;
       this.var2 = var2;
-      this.operator = operator;
       switch (operator){
          case "+":
          add();
