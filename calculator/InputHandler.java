@@ -22,13 +22,11 @@ public class InputHandler {
    
 	public String readString() {
 		String input;
-
-		try {
-			input = reader.readLine();
+      try {         
+         input = reader.readLine();         	
 		} catch(Exception e) {
 			input = "ERROR";
 		}
-
-		return input;
+      return input;
 	}
 }
