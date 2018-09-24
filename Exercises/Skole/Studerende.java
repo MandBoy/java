@@ -41,18 +41,18 @@ public class Studerende {
       this.vaegt = vaegt;
    }
    public void beregnBMI(){
-   double bmi = (this.vaegt/(this.hoejde*this.hoejde));
-
-   System.out.println(this.navn + "\tBMI tal:\t " + bmi);
-   if (bmi < 18.5) {
-      System.out.println("Eleven er undervægtig");
-   }
-   else if(bmi < 25) {
-      System.out.println("Eleven er normalvægtig");
-   }
-   else{
-      System.out.println("Eleven er overvægtig");
-   }
+      double bmi = (this.vaegt/(this.hoejde*this.hoejde));
+   
+      System.out.println(this.navn + "\tBMI tal:\t " + bmi);
+      if (bmi < 18.5) {
+         System.out.println("Eleven er undervægtig");
+      }
+      else if(bmi < 25) {
+         System.out.println("Eleven er normalvægtig");
+      }
+      else{
+         System.out.println("Eleven er overvægtig");
+      }
    }
    
    public boolean erPrimtal(int tal) {
@@ -64,6 +64,7 @@ public class Studerende {
       }
       return true;
    }
+   
    public void printPrimtal(int count){   
       for (int i = 2; i < count; i++) {
          if(erPrimtal(i))
