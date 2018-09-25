@@ -12,13 +12,13 @@ public class Skole {
       student3.setMaalStuderende(1.90, 80);
       //student3.beregnBMI();
       
-      System.out.println(student3.erPrimtal(7));
+      System.out.println(student3.erPrimtal(8));
       //returns true/false
       
-      student3.printPrimtal(50);
+      //student3.printPrimtal(500);
       //returns all primes within 2 < parameter
       
-      
+      /*
       
       boolean isPrime = true;
       int j = 7;
@@ -39,6 +39,6 @@ public class Skole {
          System.out.println("Tallet: " + j + " er ikke primtal");
       }
       
-      
+      */
    }
 }
