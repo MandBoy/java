@@ -8,7 +8,7 @@ public class Object {
       this.input = input;
       this.number = number;
    }
-   public void newObject(String name, String input, int number){
+   public void setObject(String name, String input, int number){
       this.name = name;
       this.input = input;
       this.number = number;

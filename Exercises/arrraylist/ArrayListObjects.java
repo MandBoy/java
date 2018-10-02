@@ -13,17 +13,19 @@ public class ArrayListObjects{
       list.add(object);
       
       //set object
-      object.newObject("Andreas", "inut", 10);
+      object.setObject("Andreas", "inut", 10);
       
       //tilføj object til list
       list.add(object);
       System.out.println(list.size());
       
       //set object
-      object.newObject("Jan", "inpput", 20);
+      object.setObject("Jan", "inpput", 20);
       
       //update 1 til nyt object
       list.set(1, object);
+      
+      System.out.println(list.get(1));
       
       System.out.println(list.size());
    }
