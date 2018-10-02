@@ -7,7 +7,7 @@ public class FoodOrderItem {
    static int instanceCounter = 1;
    double totalCost;
    
-   ArrayList<MenuItem> foodOrderItemList = new ArrayList<MenuItem>(); //array list of MenuItem's;
+   ArrayList<MenuItem> orderMenuItemList = new ArrayList<MenuItem>();
        
 //constructor / create instance of order    
    public FoodOrderItem (int tableNumber) { 
@@ -24,30 +24,13 @@ public class FoodOrderItem {
    public int getOrderNumber()   {  return this.orderNumber; } 
    public double getTotalCost()  {  return this.totalCost;   }
    public int getTableNumber()   {  return this.tableNumber; }
-   
-   public boolean addOrderItem(MenuItem menuItem){
-      if(foodOrderItemList.add(menuItem)){
-         this.totalCost += menuItem.getPrice();
-         return true;
-      }
-      return false;
-   }  
-   public boolean deleteOrderItem(MenuItem menuItem){
-      for (int i = 0; i < foodOrderItemList.size(); i++){
-         if (foodOrderItemList.get(i) == menuItem) {           
-            totalCost -= menuItem.getPrice();
-            foodOrderItemList.remove(i);
-            return true;
-         }   
-      }
-      return false;
-   }
+   public ArrayList getOrderMenuItemList() {  return this.orderMenuItemList; }
 
    public String printOrder(){
       String Order = "";
       System.out.println("Orders for table " + this.tableNumber);
-      for (int i = 0; i < foodOrderItemList.size(); i++) {   
-         Order += foodOrderItemList.get(i).printMenuItem() + "\n";
+      for (int i = 0; i < orderMenuItemList.size(); i++) {   
+         Order += orderMenuItemList.get(i).printMenuItem() + "\n";
       }
       return Order;
    }  
