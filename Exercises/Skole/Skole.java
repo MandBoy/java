@@ -1,44 +1,47 @@
+import java.util.Scanner;
 public class Skole {
    public static void main(String[] args) {
-      Studerende student1 = new Studerende("Andreas", "dat18c");    
-      student1.setMaalStuderende(1.75, 95);
-      //student1.beregnBMI();
+   
+      Studerende stud[] = new Studerende[3]; 
       
-      Studerende student2 = new Studerende("Christoffer", "dat18c");    
-      student2.setMaalStuderende(1.75, 50);
-      //student2.beregnBMI();
+      stud[0] = new Studerende("Andreas", "dat18c");   
+      stud[1] = new Studerende("Christoffer", "dat18c");  
+      stud[2] = new Studerende("Daniel", "dat18c");  
       
-      Studerende student3 = new Studerende("Daniel", "dat18c");    
-      student3.setMaalStuderende(1.90, 80);
-      //student3.beregnBMI();
+      //opret scanner object      
+      Scanner scanner = new Scanner(System.in);
       
-      System.out.println(student3.erPrimtal(8));
-      //returns true/false
+      //Test om tal er et primtal
+      System.out.println("Tast et tal og tjek om det er primtal");
+      int tal = scanner.nextInt();
       
-      //student3.printPrimtal(500);
-      //returns all primes within 2 < parameter
-      
-      /*
-      
-      boolean isPrime = true;
-      int j = 7;
-      
-      for (int i = 2; i < j; i++){
-            //System.out.println("Check: " + i);
-         if (j % i == 0)
-         {
-            //System.out.println(" number is false");
-            isPrime = false;
-         }
+      if(StudentCalc.erPrimtal(tal)) {
+         System.out.println(tal + " er et primtal");
+      }
+      else {
+         System.out.println(tal + " er ikke et primtal");
       }
       
-      if(isPrime) {
-         System.out.println("Tallet: " + j + " er primtal");
-      }
-      else{
-         System.out.println("Tallet: " + j + " er ikke primtal");
-      }
+      //Udskriv primt til fra 0 til indtastet tal
+      System.out.println("tast et tal og udskriv alle primtal fra 0 til tallet du skrev\n");
+      StudentCalc.printPrimtal(scanner.nextInt());
       
-      */
+      //Beregn Bmi funktion.
+      
+      stud[0].setVaegt(75);
+      stud[0].setHoejde(1.80);
+      StudentCalc.beregnBMI(stud[0]);
+      
+      
+      for (Studerende student : stud) {
+         System.out.println(student.toString());
+         System.out.println(StudentCalc.beregnBMI(student));
+      } 
+      
+      //Lav et program, der udregner sum og gennemsnit af positive heltal. 
+      //Når der tastes 0, skal der beregnes (uden at inkludere 0). Brug en while løkke.
+      
+      scanner.close();
+      
    }
 }
