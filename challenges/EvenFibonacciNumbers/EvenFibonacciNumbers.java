@@ -9,25 +9,26 @@ public class EvenFibonacciNumbers {
  
    int[] liste = new int[3];
    
-   int sum;
+   int sum = 0;
+   
    liste[0] = 1;
    liste[1] = 2;
-   liste[2] = 3;
    
    //Loop 1:
-   sum = liste[0] + liste[1];
-   liste[2] = sum; 
-   liste[1] = liste[0];
-   liste[1] = liste[2];
-   System.out.println(sum);
    
+   //sum += liste[0] + liste[1];
+   //liste[0] = liste[1];
+   //liste[1] = sum;
+  
    
-   //Loop 2:
-   sum = liste[0] + liste[1];
-   liste[2] = sum; 
-   liste[1] = liste[0];
-   liste[1] = liste[2];
-   System.out.println(sum);
+   for (sum = 3; sum < 100; sum += liste[0]) {
+    
+      sum += liste[1];   
+      liste[0] = liste[1];
+      liste[1] = sum;
+      System.out.println(sum);
+   
+   }
    
    
    
