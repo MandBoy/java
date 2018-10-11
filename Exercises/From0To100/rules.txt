@@ -10,5 +10,9 @@ Der skal kodes en strategi for hvor meget runningSum skal være før systemet st
 Når en spiller rammer 100 får den anden spiller en sidste tur til at slå over.
 
 
+Inputs: 
+opponentTotal
 
+Output:
+runningSum for slag med ternignen i form af et array?
 
