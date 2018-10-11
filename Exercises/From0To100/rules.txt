@@ -1,0 +1,14 @@
+1 terning. 
+2 spillere.
+
+En spiller kan slå lige så mange gange han vil bare han ikke rammer 1.
+
+Hvis der rammes en 1'er sættes running sum til 0 og det bliver modstanderens tur.
+
+Der skal kodes en strategi for hvor meget runningSum skal være før systemet stopper og lader modstanderen få turen.
+
+Når en spiller rammer 100 får den anden spiller en sidste tur til at slå over.
+
+
+
+

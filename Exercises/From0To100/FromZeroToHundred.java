@@ -3,6 +3,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class FromZeroToHundred {
    
+   //
+   public static int choiceToStop = 1;
    //actor vars
    public static int playerTotalScore = 0;
    public static int playerRunningSum = 0;
@@ -27,40 +29,42 @@ public class FromZeroToHundred {
    }
 
    public static void startGame(boolean playerStarts) {
-               int round = 1;              
-               while (playerTotalScore <= 100 || opponentTotalScore <= 100) {
-                  System.out.println("----------------------------------\nRound no: " + round++);
-                  displayCurrentScores();           
-                  //opponent starts
-                  if (playerStarts == false){
-                     setOpponentScore();
-                  }
-                  //players turn
-                  if(playerTotalScore <= opponentTotalScore){           
-                     System.out.println("Aggressive Playstyle");        
-                     playerTotalScore += throwDice(3);
-                  }
-                  else if(playerTotalScore >= opponentTotalScore){
-                     System.out.println("Defensive Playstyle");
-                     playerTotalScore += throwDice(2);
-                  }
-                  //opponent ends
-                  if (playerStarts == true){
-                     setOpponentScore();
-                  }        
-               }   
-               
-         //when player gets over 100      
+      int round = 1;         
+      
+      while (choiceToStop != 2) {
+         System.out.println("----------------------------------\nRound no: " + round++);
+         displayCurrentScores();
+         
+         //opponent starts
+         if (playerStarts == false){
+            setOpponentScore();
+         }
+         
+         //players turn
+         if(playerTotalScore <= opponentTotalScore){           
+            System.out.println("Aggressive Playstyle");        
+            playerTotalScore += throwDice(3);
+         }
+         else if(playerTotalScore >= opponentTotalScore){
+            System.out.println("Defensive Playstyle");
+            playerTotalScore += throwDice(2);
+         }
+         //opponent ends
+         if (playerStarts == true){
+            setOpponentScore();
+         }
+         
          if (playerTotalScore >= 100) {
             System.out.println("Player: You've reached: " + playerTotalScore);
             System.out.println("Opponent has last chance to score");
             setOpponentScore();
-           
+            choiceToStop = 2;
          }
          else if (opponentTotalScore >= 100) {
             System.out.println("Opponent: You've reached: " + opponentTotalScore);
             System.out.println("Player has last chance to score");
- 
+            choiceToStop = 2;
+            
                int runningSum = -1;
               
                while (playerTotalScore <= opponentTotalScore && runningSum != 0){
@@ -69,7 +73,8 @@ public class FromZeroToHundred {
                   runningSum = 0;
                }     
            }      
-        }  
+        }          
+      } 
       System.out.println("-----Final Scores -----\nPlayer scores: " + playerTotalScore + "\nOpponent Total Score: " + opponentTotalScore);              
    }
    
