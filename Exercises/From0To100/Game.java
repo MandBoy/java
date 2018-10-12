@@ -4,10 +4,12 @@ public class Game {
    boolean running = false;
    int opponentScore = 0;
    int playerScore = 0;
+   int round = 0;
    final int upperBoundScore = 100;
    ArrayList<Integer> runningSum;
    Dice dice = new Dice();
    int runningSumTotal = 0;
+   boolean lastRound = false;
    
    
    public Game() {
@@ -22,8 +24,18 @@ public class Game {
             opponentsTurn();
             displayScores();
             
+            if(playerScore >= 100) {
+               System.out.println("Player reached >= 100 points - Opponents Last turn");
+               opponentsTurn();   
+            }
+            else if(opponentScore >= 100){
+               System.out.println("Opponent reached >= 100 points - Players last turn.");
+               lastRound = true;
+               playersTurn();
+            }
+            
          }
-         
+         displayScores();
          this.running = false;       
       }
    }
@@ -31,16 +43,14 @@ public class Game {
    public void playersTurn(){
       runningSum = new ArrayList<Integer>();
       int diceNumber = 0;
-      boolean lastRound = false;
       
-      if(playerScore >= 100 || opponentScore >= 100) { lastRound = true; }
-      
+      //Sidste runde
       while(diceNumber != 1 && playerScore <= opponentScore && lastRound == true){
-         System.out.println("Players last turn");
          diceNumber = dice.throwDice();
          runningSum.add(diceNumber);
       }
-      while (diceNumber != 1 && sum(runningSum) < 14 && lastRound == false) {
+      //"normale runder"
+      while (diceNumber != 1 && sum(runningSum) < 18 && lastRound == false) {
          diceNumber = dice.throwDice();
          runningSum.add(diceNumber);
       }
@@ -61,6 +71,8 @@ public class Game {
       
    }
    public void displayScores(){
+      this.round++;
+      System.out.println("----------------\nRound no: " + round);
       System.out.println("Running Sum: " + runningSum +" Total: " + runningSumTotal); 
       System.out.println("Player Total Sum: " + playerScore);
       System.out.println("Opponent Total Sum: " + opponentScore);
