@@ -26,6 +26,7 @@ public class Game {
             
             if(playerScore >= 100) {
                System.out.println("Player reached >= 100 points - Opponents Last turn");
+               lastRound = true;
                opponentsTurn();   
             }
             else if(opponentScore >= 100){
