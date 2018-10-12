@@ -14,11 +14,8 @@ public class Game {
    
    public Game() {
        this.running = true;
-
-    
-       while(running) {
-         
-         //spil indtil en spiller når 100
+       while(running) {      
+         //spil indtil så længe begge spillere har en score under 100.
          while(this.playerScore <= upperBoundScore && this.opponentScore <= upperBoundScore){
             playersTurn();
             opponentsTurn();
@@ -36,11 +33,12 @@ public class Game {
             }
             
          }
+         //Vis scores når spillet slutter
          displayScores();
          this.running = false;       
       }
    }
-   
+   //spillers tur.
    public void playersTurn(){
       runningSum = new ArrayList<Integer>();
       int diceNumber = 0;
@@ -56,21 +54,25 @@ public class Game {
          runningSum.add(diceNumber);
       }
       
+      //Hvis der er slået 1 sættes runningSumTotal til 0
       if(diceNumber == 1) { 
       this.runningSumTotal = 0;
       playerScore += runningSumTotal; 
       }
+      //ellers lægges runningSumTotal til playercore;
       else {
       this.runningSumTotal = sum(runningSum); 
       playerScore += runningSumTotal; 
       }
        
    }
+   //modstanders tur - indtast TotalScoren. (ikke running sum);
    public void opponentsTurn(){
    System.out.println("Set Total Score for opponent");
    this.opponentScore = readInt();
       
    }
+   //vis scores for hver runde
    public void displayScores(){
       this.round++;
       System.out.println("----------------\nRound no: " + round);
@@ -78,7 +80,7 @@ public class Game {
       System.out.println("Player Total Sum: " + playerScore);
       System.out.println("Opponent Total Sum: " + opponentScore);
    }
-
+   //input (opponentScore)
    public static int readInt() {
       Scanner scanner = new Scanner(System.in);
       try {
