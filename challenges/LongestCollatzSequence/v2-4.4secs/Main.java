@@ -5,11 +5,9 @@ public class Main {
    long lStartTime = System.currentTimeMillis();
    
    
-   double startNumber = 13;
+   double startNumber = 1000000;
    
    double highestCount = 0;
-   
-   
 
    for(double i = startNumber; i >= 2; i--){
       

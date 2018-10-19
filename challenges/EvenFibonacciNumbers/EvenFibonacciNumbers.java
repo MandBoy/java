@@ -1,48 +1,32 @@
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 public class EvenFibonacciNumbers {
    public static void main(String[] args) {
    //udregn tid
    long lStartTime = System.currentTimeMillis();
-  
-  
    
- 
-   int[] liste = new int[3];
+   ArrayList<Double> sequenceNumbersLess4Mill = new ArrayList<Double>();
+      
+   double var1 = 1;
+   double var2 = 2;
+   double score;
    
-   int sum = 0;
+   for(int i = 0; i < 100; i++){   
+      score = var1 + var2;
+      System.out.println(score);
+      var1 = var2;
+      var2 = score;
+      if(score % 2 == 0 && score <= 4000000) {
+         sequenceNumbersLess4Mill.add(score);
+      }
+   } 
    
-   liste[0] = 1;
-   liste[1] = 2;
    
-   //Loop 1:
-   
-   //sum += liste[0] + liste[1];
-   //liste[0] = liste[1];
-   //liste[1] = sum;
-  
-   
-   for (sum = 3; sum < 100; sum += liste[0]) {
-    
-      sum += liste[1];   
-      liste[0] = liste[1];
-      liste[1] = sum;
-      System.out.println(sum);
-   
+   double sum = 0;
+   for (int i = 0; i < sequenceNumbersLess4Mill.size(); i++){
+      sum += sequenceNumbersLess4Mill.get(i);
    }
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+   System.out.println(sum);
 
    
    //udskriv tid.
