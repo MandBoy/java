@@ -26,7 +26,9 @@ public class EvenFibonacciNumbers {
    for (int i = 0; i < sequenceNumbersLess4Mill.size(); i++){
       sum += sequenceNumbersLess4Mill.get(i);
    }
-   System.out.println(sum);
+   
+   //Der lægges 2 til summen da 2 ikke er regnet med.
+   System.out.println(sum + 2);
 
    
    //udskriv tid.
