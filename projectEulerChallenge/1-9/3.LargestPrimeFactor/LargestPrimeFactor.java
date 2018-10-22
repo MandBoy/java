@@ -1,38 +1,30 @@
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.lang.Math;
 public class LargestPrimeFactor {
    public static void main(String[] args) {
    //start tid
    long lStartTime = System.currentTimeMillis();
    //------------------------------------------
-   //--Plan. 
-   //1. Lav liste med tal der går op testnummeret.    
-   //2. Træk det højeste tal fra der går op i et mindre tal - lav ny liste med de nye tal.
+   
 
-   int testNumber = 13195;
+   //double testNumber = Math.ceil(Math.sqrt(600851475143L));
+   //System.out.println(testNumber);
+   Long testNumber = 775147L;
    
-   ArrayList<Integer> list = new ArrayList<Integer>();
-   ArrayList<Integer> primeList = new ArrayList<Integer>();
+   ArrayList<Long> list = new ArrayList<Long>();
+   ArrayList<Integer> nonPrimeList = new ArrayList<Integer>();
    
-   boolean running = true;
-   
-   while (running){
-      //1.
-      for(int i = 2; i < testNumber; i++){
+
+      for(long i = 2; i < testNumber; i++){
+         //System.out.println(i);
+         
          if(testNumber % i == 0){
+            System.out.println("got there" + i);
             list.add(i);
          }
       }
-      System.out.println(list);
-      System.out.println(5 % 35);
-      System.out.println(35 % 5);      
-      running = false;
-   }
 
-  // System.out.println(list.toString());
-   
-  
-   
    //------------------------------------------
    //udskriv tid.
    long lEndTime = System.currentTimeMillis();
