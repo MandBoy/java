@@ -11,6 +11,7 @@ public class Arraylist {
       al.add("B");
       al.add("D");
       al.add("F");
+
       
       //INDSÆT PÅ PLADS ET. Felt 1 bevares og bliver til 2.
       al.add(1, "A2");
