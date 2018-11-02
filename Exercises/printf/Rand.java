@@ -1,32 +1,34 @@
-
-public class Rand {
+//https://alvinalexander.com/programming/printf-format-cheat-sheet
+import java.util.Random;
+public class Rand
+{
+   public static void main(String[] args)
+   {
+      //brug printf("formatstreng", paramater1, parameter2, ..., paramtern);
+      System.out.printf("Formatter int: %10d er tallet og decimaltallet er: %.4f, streng: %s", 10027, 1003.14159265, "Hej!");
+      //%d er heltal, %f er decimaltal, %.2f betyder 4 cifre efter komma, %s er tekststreng
+      //%04d sætter 4 karakterer af til tallet og foranstiller 0'er så alle pladser bruges
+      System.out.println();
+      int x= 42;
+      double y = Math.PI;
       
-      public static void main(String[] args){
+      //%8.2f afsætter plads til 8 karakterer, med 2 decimaler
+      System.out.printf("Formatter int: %04d er tallet og decimaltallet er: %8.2f", x, y);
+      System.out.println();
       
-         //brug printf("formatstreng", parameter1, param2, ..., paramtern);
-         System.out.printf("Formatter int: %d er tallet\ndecimaltal er: %10.6f", 10027, 3.5);
-         //%d er hel tal
-         //%f er decimal tal. %2.8f betyder 2 cifre før komma og 8 efter
-         
-         int x = 42;
-         double y = Math.PI;
-         
-         System.out.printf("\nFormater int: %10d er taller og decimaltallet er: %4.8f", x, y);
-         System.out.printf("\nFormater int: %010d er taller og decimaltallet er: %4.2f", x, y);
-         
-         System.out.printf("\nFormater int: %10d er tallet og decimaltallet er: %10.5f", x,y);
-                  
-         final int ANTAL = 10;
-         for(int i=0; i < ANTAL; i++){
-            double r1 = (int)(Math.random() * 6) + 1;
-            System.out.printf("%nMath.random(): %1.4f ran.nextInt(): %2", r1);
-         
-         }
-         
-         
-         
-         
+      //konstant med antallet af tal vi skal bruge
+      final int ANTAL = 10;
+      
+      //instantier random objekt
+      Random ran = new Random();
+      
+      for (int i=0; i<ANTAL; i++)
+      {
+         //tilfædigt tal mellem 0 og 1
+         double r1 = Math.random();
+         //næste heltal
+         int r2 = ran.nextInt(100);
+         System.out.printf("Math.random(): %7.4f ran.nextInt(): %2d%n", r1, r2);
       }
-
-
+   }
 }
