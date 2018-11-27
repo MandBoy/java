@@ -1,15 +1,18 @@
+package ChessSystem;
+
 import java.io.*;
-import java.util.*;
+
 public class startChessSystem {
 
     public static void main(String[] args){
-        //testing
-        File f = new File("../dbfiles/memberDatabase");
+        //test af fileHandler
+        File f = new File("dbfiles/memberDatabase");
         FileHandler fH = new FileHandler();
-        fH.appendLine(f, "TestString");
+        System.out.println(fH.readLine(f, 5));
+        fH.updateLine(f, 5, "HEJ");
 
         //prod
-        //CallSystem();
+        CallSystem();
 
     }
     private static void CallSystem(){

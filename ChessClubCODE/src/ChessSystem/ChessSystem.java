@@ -1,10 +1,12 @@
+package ChessSystem;
+
 public class ChessSystem {
-    LoginFH loginFH = new LoginFH();
-    InputHandler input = new InputHandler();
+    private LoginFH loginFH = new LoginFH();
+    private InputHandler input = new InputHandler();
     //ChairmanMGMT charmanMGMT;
     //CashierMGMT cashierMGMT;
     //TeamLeaderMGMT teamLeaderMGMT;
-    boolean running = false;
+    private boolean running = false;
 
     public ChessSystem(){
         running = true;
@@ -38,7 +40,7 @@ public class ChessSystem {
             }
         }
     }
-    public String Login(){
+    private String Login(){
         System.out.println("Enter username");
         String username = input.readString();
         System.out.println("Enter password");
@@ -47,7 +49,7 @@ public class ChessSystem {
         String role = loginFH.verifyUserCredentials(username, password);
         return role;
     }
-    public void showStartMenu() {
+    private void showStartMenu() {
         System.out.println("--- Chess Club System ---");
         System.out.println("1. Login");
         System.out.println("2. Print Strengthlist");
