@@ -1,24 +1,26 @@
 package ChessSystem;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
-public class InputHandler {
-    Scanner scanner;
-    InputHandler(){
-        scanner = new Scanner(System.in);
-    }
 
-    public String readString() {
-            scanner = new Scanner(System.in);
-            return scanner.nextLine();
-    }
+public class InputHandler{
 
-    public int readInt() {
-        // wait for integer input
-        while(!scanner.hasNextInt()) {
-            scanner.next();
+    public static class Reads {
+        public static Scanner scanner = new Scanner(System.in);
+        public Reads(){
+
         }
-        return scanner.nextInt();
+        public static String readString(){
+            String str = scanner.next();
+            return str;
+        }
+        public static int readInt() {
+            // wait for integer input
+            while(!scanner.hasNextInt()) {
+                scanner.next();
+            }
+            return scanner.nextInt();
+        }
+
     }
 }
-
-

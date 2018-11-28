@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.*;
 public class FileHandler {
 
-    File tempFile = new File("../../dbfiles/tempFile");
+    File tempFile = new File("dbfiles/tempFile");
     PrintStream output;
     Scanner scanner;
 
@@ -13,13 +13,11 @@ public class FileHandler {
     //Skriv til sidste linje i fil.
     public boolean appendLine(File file, String line){
         try {
-            Scanner scanner = new Scanner(System.in);
             BufferedWriter bw = new BufferedWriter(new FileWriter(file.toString(), true));
             bw.write(line);
             bw.newLine();
             bw.flush();
             bw.close();
-            scanner.close();
             System.out.println("line was added\n" + line);
         }
         catch(FileNotFoundException e){
@@ -139,6 +137,7 @@ public class FileHandler {
                 output.println(input.nextLine());
             }
             input.close();
+            output.close();
         }
         catch (FileNotFoundException e){
             System.out.println("Fejl: " + e);

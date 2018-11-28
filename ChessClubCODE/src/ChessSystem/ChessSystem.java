@@ -1,18 +1,20 @@
 package ChessSystem;
 
+import TeamLeaderManagement.TeamLeaderMGMT;
+
 public class ChessSystem {
     private LoginFH loginFH = new LoginFH();
-    private InputHandler input = new InputHandler();
     //ChairmanMGMT charmanMGMT;
     //CashierMGMT cashierMGMT;
-    //TeamLeaderMGMT teamLeaderMGMT;
-    private boolean running = false;
-
+    TeamLeaderMGMT teamLeaderMGMT;
+    InputHandler.Reads input;
+    private boolean running;
     public ChessSystem(){
+
         running = true;
         while (running){
             showStartMenu();
-
+            this.input = new InputHandler.Reads();
             switch (input.readInt()){
                 case 1:
                     String role = Login();
@@ -25,6 +27,7 @@ public class ChessSystem {
                                 break;
                             case "teamleader":
                                 System.out.println("welcome to Team Leader Management");
+                                teamLeaderMGMT = new TeamLeaderMGMT();
                                 break;
                             default:
                                 System.out.println("Wrong username / password - try again");
@@ -38,6 +41,7 @@ public class ChessSystem {
                     break;
 
             }
+
         }
     }
     private String Login(){
