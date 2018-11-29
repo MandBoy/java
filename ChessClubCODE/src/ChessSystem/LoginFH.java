@@ -15,7 +15,6 @@ public class LoginFH extends FileHandler {
         String[] lineArray;
 
         while(lineFull != ""){
-
             //username;password;role
             lineFull = readLine(userLogins, lineNum);
             //line[] indeholder nu de 3 elementer

@@ -4,7 +4,7 @@ import ChessSystem.InputHandler;
 
 import java.io.*;
 
-public class startChessSystem {
+public class StartChessSystem {
 
     public static void main(String[] args){
         //FileHandler Test -----------------------------------------

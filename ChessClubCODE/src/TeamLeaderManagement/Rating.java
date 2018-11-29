@@ -1,13 +1,13 @@
 package TeamLeaderManagement;
 
-import ChessSystem.InputHandler;
+import ChessSystem.InputHandler.*;
 
 //Noter omkring klassen -
 //Forslag til forbedringer.
 //1. Bør der bruges klassen Date til tournamentDate?
 
 public class Rating {
-    InputHandler.Reads input;
+    Reads input;
     private static int listID;
     private int memberNumber;
     private double playerRating;
@@ -16,7 +16,7 @@ public class Rating {
 
     //public Rating(){}
     public Rating(){
-        input = new InputHandler.Reads();
+        input = new Reads();
 
         System.out.println("Skriv List id(Skal fixes - bør autogeneres.)");
         this.listID = input.readInt();
@@ -25,7 +25,7 @@ public class Rating {
         this.memberNumber = input.readInt();
 
         System.out.println("Rating");
-        this.playerRating = input.readInt();
+        this.playerRating = input.readDouble();
 
         System.out.println("Tour name");
         this.tournamentName = input.readString();

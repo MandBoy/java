@@ -1,6 +1,5 @@
 package ChessSystem;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class InputHandler{
@@ -15,11 +14,16 @@ public class InputHandler{
             return str;
         }
         public static int readInt() {
-            // wait for integer input
             while(!scanner.hasNextInt()) {
                 scanner.next();
             }
             return scanner.nextInt();
+        }
+        public static double readDouble() {
+            while(!scanner.hasNextInt()) {
+                scanner.next();
+            }
+            return scanner.nextDouble();
         }
 
     }

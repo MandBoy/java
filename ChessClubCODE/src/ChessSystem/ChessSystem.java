@@ -1,20 +1,21 @@
 package ChessSystem;
 
 import TeamLeaderManagement.TeamLeaderMGMT;
+import ChessSystem.InputHandler.*;
 
 public class ChessSystem {
     private LoginFH loginFH = new LoginFH();
     //ChairmanMGMT charmanMGMT;
     //CashierMGMT cashierMGMT;
     TeamLeaderMGMT teamLeaderMGMT;
-    InputHandler.Reads input;
+    Reads input;
     private boolean running;
     public ChessSystem(){
 
         running = true;
         while (running){
             showStartMenu();
-            this.input = new InputHandler.Reads();
+            this.input = new Reads();
             switch (input.readInt()){
                 case 1:
                     String role = Login();

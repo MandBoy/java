@@ -18,7 +18,7 @@ public class FileHandler {
             bw.newLine();
             bw.flush();
             bw.close();
-            System.out.println("line was added\n" + line);
+            System.out.println("line was added to file: " + file.toString() + "\n" + line);
         }
         catch(FileNotFoundException e){
             System.out.println(e);
