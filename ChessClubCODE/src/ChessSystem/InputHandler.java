@@ -20,7 +20,7 @@ public class InputHandler{
             return scanner.nextInt();
         }
         public static double readDouble() {
-            while(!scanner.hasNextInt()) {
+            while(!scanner.hasNextDouble()) {
                 scanner.next();
             }
             return scanner.nextDouble();
